@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+  <data>
+
+    <record model="ir.ui.view" id="view_partner_extend">
+        <field name="name">account.invoice.extend</field>
+        <field name="model">account.invoice</field>
+        <field name="inherit_id" ref="account.invoice_tree"/>
+        <field name="arch" type="xml">
+            <field name="state" position="after">
+                <field name="last_payment_date"/>
+                <button type="object" name="action_ver_pagos" string="Ver pagos" icon="gtk-justify-fill"/>
+            </field>
+        </field>
+    </record>
+
+  </data>
+</openerp>
